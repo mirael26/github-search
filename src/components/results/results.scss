@@ -1,0 +1,42 @@
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 1250px;
+  padding-top: 20px;
+}
+
+.results__headers,
+.results__row {
+  display: flex;
+  gap: 20px;
+}
+
+.results__name {
+  @include text;
+  width: 10%;
+  flex-grow: 1;
+}
+
+.results__name-link {
+  @include text;
+}
+
+.results__autor {
+  @include text;
+  width: 10%;
+  flex-grow: 1;
+
+}
+
+.results__private {
+  @include text;
+  width: 10%;
+}
+
+.results__headers .results__name,
+.results__headers .results__autor,
+.results__headers .results__private {
+  color: $blue;
+  font-weight: 700;
+}

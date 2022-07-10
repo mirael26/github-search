@@ -3,6 +3,8 @@ import { useState } from "react";
 
 import { Repos, Response } from "../../types";
 
+import Results from "../results/results";
+
 const RESULT_COUNT = 10;
 
 const Search = (): JSX.Element => {
@@ -44,7 +46,6 @@ const Search = (): JSX.Element => {
     setInputValue(evt.target.value);
   };
   
-
   const onFormSubmit = (evt: React.SyntheticEvent) => {
     evt.preventDefault();
     setError(false);
@@ -61,8 +62,7 @@ const Search = (): JSX.Element => {
         <button className="search__search-button" type="submit">Найти</button>
       </form>
 
-      <div className="search__results">
-      </div>
+      {repos?.length ? <Results repos={repos} /> : null}
     </div>
   )
 }
