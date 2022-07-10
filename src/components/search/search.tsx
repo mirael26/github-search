@@ -33,7 +33,7 @@ const Search = (): JSX.Element => {
       return {
         id: item.id,
         name: item.name,
-        private: item.private,
+        description: item.description,
         user: item.owner.login,
         url: item.html_url,
       }

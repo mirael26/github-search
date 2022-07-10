@@ -12,14 +12,14 @@ const Results = ({ repos }: ResultsProps): JSX.Element => {
       <div className="results__headers">
         <div className="results__name"> Название </div>
         <div className="results__autor"> Автор </div>
-        <div className="results__private"> Приватность </div>
+        <div className="results__description"> Описание </div>
       </div>
 
       {repos.map((repo, i) => {
         return <div key={i} className="results__row">
             <div className="results__name"><a className="results__name-link" href={repo.url} target="_blank" > {repo.name} </a></div>
             <div className="results__autor"> {repo.user} </div>
-            <div className="results__private"> {repo.private ? "Да" : "Нет"} </div>
+            <div className="results__description"> {repo.description} </div>
           </div>
       })}
     </div>

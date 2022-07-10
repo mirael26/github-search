@@ -2,7 +2,7 @@ export interface Response {
   total_count: number,
   items: Array<{id: number,
     name: string,
-    private: boolean,
+    description: string,
     owner: {
       login: string
     },
@@ -12,7 +12,7 @@ export interface Response {
 export interface Repo {
   id: number,
   name: string,
-  private: boolean,
+  description: string,
   user: string,
   url: string,
 };

@@ -29,14 +29,15 @@
 
 }
 
-.results__private {
+.results__description {
   @include text;
-  width: 10%;
+  width: 30%;
+  flex-grow: 2;
 }
 
 .results__headers .results__name,
 .results__headers .results__autor,
-.results__headers .results__private {
+.results__headers .results__description {
   color: $blue;
   font-weight: 700;
 }
