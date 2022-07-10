@@ -56,15 +56,16 @@ const Search = (): JSX.Element => {
 
   return (
     <div className="search">
-      <h1 className="search__title">Поиск репозиториев на Github</h1>
+      <h1 className="search__title"> Поиск репозиториев на Github </h1>
       <form className="search__form" onSubmit={onFormSubmit}>
         <input className="search__input" type="text" placeholder="Введите текст" value={inputValue} onChange={onInputChange}/>
-        <button className="search__search-button" type="submit">Найти</button>
+        <button className="search__search-button" type="submit"> Найти </button>
       </form>
 
       {repos?.length ? <Results repos={repos} /> : null}
       {repos?.length ? <p className="search__total"> Найдено {totalCount} репозиториев </p> : null}
       {repos?.length === 0 ? <p className="search__no-results"> Результатов не найдено </p> : null}
+      {isError ? <p className="search__error"> Возникла ошибка, попробуйте еще раз </p> : null}
     </div>
   )
 }
