@@ -64,6 +64,7 @@ const Search = (): JSX.Element => {
 
       {repos?.length ? <Results repos={repos} /> : null}
       {repos?.length ? <p className="search__total"> Найдено {totalCount} репозиториев </p> : null}
+      {repos?.length === 0 ? <p className="search__no-results"> Результатов не найдено </p> : null}
     </div>
   )
 }
